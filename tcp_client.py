@@ -14,7 +14,7 @@ print ("hi")
 # recieve a message from the server..... you mast specify the max number of bytes to recieve
 message = client_socket.recv(1024)
 print (message.decode("utf-8"))
-answer = str(input("what do you want to do niger s/r"))
+answer = str(input("what do you want to send or recieve s/r"))
 client_socket.send(answer.encode())
 def sendD():
     global fpath
@@ -43,7 +43,7 @@ def ClientToServer():
     
 def recieve():
     global client_socket
-    which_file= str(input("enter the name of the file...niger!!!"))
+    which_file= str(input("enter the name of the file!!!"))
     client_socket.send(which_file.encode())
     ClientToServer() 
    # file1_name = client_socket.recv(1024).decode()
